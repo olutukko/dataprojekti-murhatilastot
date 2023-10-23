@@ -1,0 +1,16 @@
+murhien määrä vuosittain
+ratkotut vs mysteerit vuosittain
+murha-aseiden määrä
+murha-aseet vuosittain
+murhaajien määrä sukupuolittain
+uhrien määrä sukupuolittain
+uhrien ja murhaajien suhde miinus ne jotka ei ole tiedossa
+uhrien ja murhaajien suhde tiedossa vs ei tiedossa
+ratkottujen murhien määrä tekoväline tiedossa vs ei tiedossa
+ratkottujen murhien tekijän "rotu"
+ratkottujen vs ei rarkottujen murhien uhrien "rotu"
+murha-aseiden vertailu osavaltioittain
+murhien määrä kuukausittain
+piirakka-kaavio murhista vuodenajanmukaan
+piirakka-kaavio ratkomattomista murhista vuodenajan mukaan
+ratkotut vs mysteerit murhat osavaltioittain
