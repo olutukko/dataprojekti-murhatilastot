@@ -137,6 +137,17 @@ plt.ylabel('Count')
 plt.xticks(rotation=90)
 plt.show()
 
+plt.figure(figsize=(12, 8))
+weapon_counts.plot(kind='bar', color='lightcoral')
+
+plt.yscale('log')  # Set y-axis to logarithmic scale
+plt.title('Murder Weapons Used (Logarithmic Scale)')
+plt.xlabel('Weapon')
+plt.ylabel('Count (log scale)')
+plt.xticks(rotation=90)
+plt.show()
+
+
 
 # Perpetrator sex #
 
@@ -181,6 +192,19 @@ plt.xlabel('Frequency')
 plt.ylabel('Number of Relationships')
 plt.xticks(rotation=90) 
 plt.show()
+
+#logarithmic version
+plt.figure(figsize=(10, 6))
+relationship_counts[relationship_counts.index != 'Unknown'].plot(kind='bar', color='skyblue')
+
+plt.yscale('log')  # Set y-axis to logarithmic scale
+plt.title('Relationship between Victim and Perpetrator (Excluding "Unknown")')
+plt.xlabel('Frequency')
+plt.ylabel('Number of Relationships (log scale)')
+plt.xticks(rotation=90)
+plt.show()
+
+
 
 
 # Unknown vs known relationships when crime is solved #
@@ -236,5 +260,24 @@ plt.xticks(range(len(states)), states, rotation=90)
 plt.title('Comparison of Solved vs Unsolved Murders by State')
 plt.xlabel('State')
 plt.ylabel('Count')
+plt.legend().set_visible(False)
+plt.show()
+
+#solved unsolved logarithmic
+plt.figure(figsize=(14, 8))
+colors = ['lightgreen', 'lightcoral']
+
+for i, state in enumerate(states):
+    solved_counts = murder_counts.loc[state]['Yes']
+    unsolved_counts = murder_counts.loc[state]['No']
+
+    plt.bar(i - bar_width / 2, solved_counts, width=bar_width, label=f'{state} - Solved', color=colors[0])
+    plt.bar(i + bar_width / 2, unsolved_counts, width=bar_width, label=f'{state} - Unsolved', color=colors[1])
+
+plt.yscale('log')  # Set y-axis to logarithmic scale
+plt.xticks(range(len(states)), states, rotation=90)
+plt.title('Comparison of Solved vs Unsolved Murders by State (Logarithmic Scale)')
+plt.xlabel('State')
+plt.ylabel('Count (log scale)')
 plt.legend().set_visible(False)
 plt.show()
